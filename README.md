@@ -31,13 +31,13 @@ Use a random `chainId`, keep `difficulty` low to mine fast.
 Create a private blockchain in your `blockChainFolder` with your shell:
 
 ```sh
-geth —datadir="ethdata" init genesis.json
+geth --datadir="ethdata" init genesis.json
 ```
 
 Create a network for the private blockchain and start a console, chose a random (high) networkid:
 
 ```sh
-geth —datadir="ethdata" —networkid 20123 console
+geth --datadir="ethdata" --networkid 20123 console
 ```
 
 Now you have access to your blockchain via console.
