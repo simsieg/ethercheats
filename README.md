@@ -36,7 +36,7 @@ geth —datadir="ethdata" init genesis.json
 Create a network for the private blockchain and start a console, chose a random (high) networkid:
 
 ```sh
-geth —datadir="ethdata" —networkid 20123 —nodiscover console
+geth —datadir="ethdata" —networkid 20123 console
 ```
 
 Now you have access to your blockchain via console.
@@ -45,7 +45,7 @@ Now you have access to your blockchain via console.
 
 Create an account:
 
-```sh
+```javascript
 personal.newAccount('insertYourPasswordHere')
 ```
 
@@ -53,19 +53,19 @@ You receive an address like `0x29fbf84ff0f76d0b720d1b22de0aabd8779e362d`.
 
 Show all accounts:
 
-```sh
+```javascript
 eth.accounts
 ```
 
 Assuming yours is the first in the list, you get your Balance with:
 
-```sh
+```javascript
 eth.getBalance(eth.accounts[0])
 ```
 
 You can also pass your address directly to the `getBalance` function.
 
-```sh
+```javascript
 eth.getBalance('0x29fbf84ff0f76d0b720d1b22de0aabd8779e362d')
 ```
 
@@ -74,23 +74,23 @@ eth.getBalance('0x29fbf84ff0f76d0b720d1b22de0aabd8779e362d')
 To get ether, we need to mine some blocks.
 
 Bind the miner to your address:
-```sh
+```javascript
 miner.setEttherbase(eth.accounts[0])
 ```
 
 To start mining:
-```sh
+```javascript
 miner.start()
 ```
 
 Wait some time, then stop the miner with:
-```sh
+```javascript
 miner.stop()
 ```
 
 Let's take a look how rich you are:
 
-```sh
+```javascript
 eth.getBalance(eth.accounts[0])
 ```
 
@@ -100,7 +100,7 @@ Now create another account like explained above.
 
 It's time to spend your money:
 
-```sh
+```javascript
 eth.sendTransaction({from: eth.accounts[0], to: eth.accounts[1], value: 202020})
 ```
 
