@@ -2,13 +2,17 @@
 
 ## Cheatsheet for Private Ethereum Chains
 
+### Installation
+
 Install `geth` from https://geth.ethereum.org/downloads/.
 In Windows: Add installation path to environment variable `PATH`.
 
 Create a folder for your Blockchain: `blockChainFolder`
 
+### Blockchain Creation
+
 Create a `genesis.json` in your `blockChainFolder`.
-Use a random chainId, keep difficulty low to mine fast.
+Use a random `chainId`, keep `difficulty` low to mine fast.
 
 ```json
 {
@@ -37,6 +41,8 @@ geth —datadir="ethdata" —networkid 20123 —nodiscover console
 
 Now you have access to your blockchain via console.
 
+### Accounts and Balances
+
 Create an account:
 
 ```sh
@@ -63,6 +69,7 @@ You can also pass your address directly to the `getBalance` function.
 eth.getBalance('0x29fbf84ff0f76d0b720d1b22de0aabd8779e362d')
 ```
 
+### Mining
 
 To get ether, we need to mine some blocks.
 
@@ -87,6 +94,7 @@ Let's take a look how rich you are:
 eth.getBalance(eth.accounts[0])
 ```
 
+### Transactions
 
 Now create another account like explained above.
 
