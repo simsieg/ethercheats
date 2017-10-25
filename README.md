@@ -76,7 +76,7 @@ To get ether, we need to mine some blocks.
 
 Bind the miner to your address:
 ```javascript
-miner.setEttherbase(eth.accounts[0])
+miner.setEtherbase(eth.accounts[0])
 ```
 
 To start mining:
