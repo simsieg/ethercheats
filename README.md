@@ -99,6 +99,12 @@ eth.getBalance(eth.accounts[0])
 
 Now create another account like explained above.
 
+Unlock your account:
+
+```javascript
+personal.unlockAccount(eth.accounts[0], 'insertYourPasswordHere')
+```
+
 It's time to spend your money:
 
 ```javascript
