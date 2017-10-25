@@ -23,7 +23,8 @@ Use a random `chainId`, keep `difficulty` low to mine fast.
         "eip158Block": 0
     },
     "difficulty": "0x10000",
-    "gasLimit": "2100000"
+    "gasLimit": "2100000",
+    "alloc": {}
 }
 ```
 
