@@ -60,7 +60,7 @@ geth --datadir="ethdata" --networkid [aNetworkId] --rpcport [aPort] --rpcaddr [a
 
 `rpcport` - a unique port e.g. 8001
 
-`rpcaddr` - your address in the network e.g. 10.0.0.1
+`rpcaddr` - your address in the network e.g. 10.0.0.2
 
 
 Get your enode
@@ -73,6 +73,17 @@ This looks like
 
 Replace `[::]` with your ip and give it to your partner.
 
+Your partner adds you with:
+
+```
+admin.addPeer('enode://616f524fecc375df460c7d47fc84d9b2049a1feac0d15c956a7b93ae84916e2fbd928b2d544d16c5f9be8d5516992019438bcdebaba7177248c624fc2bd34aac@10.0.0.2:30303')
+```
+
+See all participants with
+
+```
+admin.peers
+```
 
 ### Accounts and Balances
 
