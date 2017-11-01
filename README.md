@@ -52,8 +52,8 @@ Now you have access to your blockchain via console.
 
 Connect to a network:
 
-```
-geth --datadir test --networkid [aNetworkId] --rpcport [aPort] --rpcaddr [aIp] --rpc console --ipcdisable
+```shell
+geth --datadir="ethdata" --networkid [aNetworkId] --rpcport [aPort] --rpcaddr [aIp] --rpc console --ipcdisable
 ```
 
 `networkid` - the networkid of your chain e.g. 20123 
@@ -62,6 +62,16 @@ geth --datadir test --networkid [aNetworkId] --rpcport [aPort] --rpcaddr [aIp] -
 
 `rpcaddr` - your address in the network e.g. 10.0.0.1
 
+
+Get your enode
+```javascript
+admin.nodeInfo.enode
+```
+This looks like
+
+`enode://616f524fecc375df460c7d47fc84d9b2049a1feac0d15c956a7b93ae84916e2fbd928b2d544d16c5f9be8d5516992019438bcdebaba7177248c624fc2bd34aac@[::]:30303`
+
+Replace `[::]` with your ip and give it to your partner.
 
 
 ### Accounts and Balances
