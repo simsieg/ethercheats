@@ -28,6 +28,12 @@ Use a random `chainId`, keep `difficulty` low to mine fast.
 }
 ```
 
+### Blockchain Setup
+
+You can either create a private chain or connect to a network:
+
+#### Private Chain
+
 Create a private blockchain in your `blockChainFolder` with your shell:
 
 ```sh
@@ -41,6 +47,22 @@ geth --datadir="ethdata" --networkid 20123 console
 ```
 
 Now you have access to your blockchain via console.
+
+#### Connect to Network
+
+Connect to a network:
+
+```
+geth --datadir test --networkid [aNetworkId] --rpcport [aPort] --rpcaddr [aIp] --rpc console --ipcdisable
+```
+
+`networkid` - the networkid of your chain e.g. 20123 
+
+`rpcport` - a unique port e.g. 8001
+
+`rpcaddr` - your address in the network e.g. 10.0.0.1
+
+
 
 ### Accounts and Balances
 
