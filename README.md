@@ -158,3 +158,5 @@ The money is not directly available in the second account, the transaction has t
 So start and stop the miner as explained above and check out the balances.
 
 
+
+
